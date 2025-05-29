@@ -12,6 +12,7 @@ body {
 	background-image: linear-gradient(to bottom right, blanchedalmond, burlywood);
 }
 
+/* for centering and aligning content */
 .main-content {
 	max-width: 50rem;
 	height: 100%;
@@ -20,23 +21,34 @@ body {
 	gap: 4rem;
 }
 
+/* styling for content container divs */
 .container {
 	padding: 1rem;
 	border-radius: 1rem;
+	/* following styles in this class sourced from https://css.glass */
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
+/* the grid layout for the species container */
 .species-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
+	gap: 0.5rem;
 }
 
-.species-container img {
+/* the grid layout for the image container in the species container*/
+.species-container .img-container {
 	width: 100%;
 	grid-column: 2;
-	grid-row: 1 / 6;
+	grid-row: 1 / 7;
 }
 
+/* styling for my data table */
 .styled-table {
 	width: 100%;
 	border-collapse: collapse;
@@ -59,14 +71,4 @@ body {
 td {
 	text-align: left;
 	padding: 1rem;
-}
-
-.frosted-glass {
-	/* From https://css.glass */
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
 }

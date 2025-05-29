@@ -1,3 +1,9 @@
+<!--
+File: index.html
+GUI Assignment: Creating Your First Web Page
+Owen Plesko, UMass Lowell Computer Science, owen_plesko@student.uml.edu
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +14,13 @@
 </head>
 
 <body>
+	<!-- This div is the main content container, it is used to vertically align and size my containers-->
 	<div class="main-content">
-		<div class="container frosted-glass intro-container">
+		<!-- This div is the container for my intro container -->
+		<div class="container intro-container">
+			<!-- This the the label for my intro container -->
 			<h1>A Guide To Coffee</h1>
+			<!-- This is the content for my intro container -->
 			<p>66% of adults in America drink coffee every day. But for how common coffee is it's just as
 				complex.
 				There are
@@ -24,8 +34,11 @@
 				coffee, not even close, but it will scratch the surface of species.
 			</p>
 		</div>
-		<div class="container frosted-glass species-container">
+		<!-- This is the container for my coffee species section -->
+		<div class="container species-container">
+			<!-- This is my label for the container -->
 			<h2>Species</h2>
+			<!-- This is the intro for this container -->
 			<p>While there are 129 different species of Coffea the majority of species are unfit for
 				commercial
 				production.
@@ -33,7 +46,9 @@
 				those 4
 				Arabic and
 				Robusta make up roughly 95% of coffee production.</p>
+			<!-- This is the label for the Arabica subsection of the species section -->
 			<h3>Arabica</h3>
+			<!-- This is the content for the Arabica subsection -->
 			<p>Arabica is the most common species produced and sold around the world. Arabica prefers to
 				grow at
 				high
@@ -42,7 +57,9 @@
 				is
 				known to have a sweeter, fruitier, more floral flavor profile when compared to Robusta.
 			</p>
+			<!-- This is the label for the Robusta subsection -->
 			<h3>Robusta</h3>
+			<!-- This is the content for the Robusta subsection -->
 			<p>Robusta is the second most common species of Coffea. Robusta prefers to grow at lower
 				altitudes
 				compared to
@@ -58,15 +75,20 @@
 				poorer conditions. Poorly grown Robusta coffee entering the market has created the
 				misconsception that
 				Robusta as a species is of a lower quality than Arabica.</p>
-			<img src="assets/coffea_arabica.jpg" alt="Cofea Arabica">
-			<span>Open source image sourced from
-				<a href="https://www.rawpixel.com/image/12230788/image-plant-art-vintage"
-					target="_blank">
-					raw pixel
-				</a>
-				.
-			</span>
+			<!-- This div is used to group the img and its label -->
+			<div class="img-container">
+				<!-- This image is open source and from https://www.rawpixel.com/image/12230788/image-plant-art-vintage -->
+				<img src="assets/coffea_arabica.jpg" alt="Cofea Arabica">
+				<span>Open source image sourced from
+					<a href="https://www.rawpixel.com/image/12230788/image-plant-art-vintage"
+						target="_blank">
+						raw pixel
+					</a>
+					.
+				</span>
+			</div>
 		</div>
+		<!-- This is a table sumarizing the species section in an organized logical way -->
 		<table class="styled-table">
 			<thead>
 				<tr>
