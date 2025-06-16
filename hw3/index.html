@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>HW3 - Multiplication Table</title>
+</head>
+
+<body>
+  <form id="tableBoundsForm">
+    <label>
+      Y lower bound:
+      <input type="number" min="-50" max="50" name="yLower" />
+    </label>
+    <label>
+      Y upper bound:
+      <input type="number" min="-50" max="50" name="yUpper" />
+    </label>
+    <label>
+      X lower bound:
+      <input type="number" min="-50" max="50" name="xLower" />
+    </label>
+    <label>
+      X upper bound:
+      <input type="number" min="-50" max="50" name="xUpper" />
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="tableContainer"></div>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
