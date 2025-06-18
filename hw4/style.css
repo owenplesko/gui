@@ -1,0 +1,42 @@
+/*
+ GUI HW4
+ Owen Plesko
+ owen_plesko@student.uml.edu
+*/
+
+body {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr;
+  height: 400px;
+}
+
+#tableBoundsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: lavenderblush;
+  border: solid 2px;
+  padding: 1rem;
+}
+
+#tableContainer {
+  width: 400px;
+  height: 400px;
+  overflow: auto;
+  border: solid 2px;
+}
+
+th,
+td {
+  border: 1px solid;
+  padding: 0.25rem;
+}
+
+th {
+  background-color: mediumpurple;
+}
+
+td {
+  background-color: lavenderblush;
+}
