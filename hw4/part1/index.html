@@ -1,0 +1,45 @@
+<!-- 
+GUI HW 4
+Owen Plesko
+owen_plesko@student.uml.edu
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>HW4 - jQuery Validation</title>
+</head>
+
+<body>
+  <form id="tableBoundsForm">
+    <label for="xLower">
+      X lower bound:
+      <input type="number" name="xLower" id="xLower" />
+    </label>
+    <label for="xUpper">
+      X upper bound:
+      <input type="number" name="xUpper" id="xUpper" />
+    </label>
+    <label for="yLower">
+      Y lower bound:
+      <input type="number" name="yLower" id="yLower" />
+    </label>
+    <label for="yUpper">
+      Y upper bound:
+      <input type="number" name="yUpper" id="yUpper" />
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="tableContainer"></div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery Validation Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>

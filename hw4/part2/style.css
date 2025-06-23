@@ -1,0 +1,65 @@
+/*
+ GUI HW4
+ Owen Plesko
+ owen_plesko@student.uml.edu
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 100%;
+}
+
+main {
+  min-width: 800px;
+  width: 80%;
+  max-width: 1600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: solid 1px;
+  padding: 1rem;
+}
+
+#createForm {
+  background-color: palegreen;
+}
+
+#deleteContainer {
+  background-color: indianred;
+}
+
+#tableTabs {
+  border-radius: 0;
+  border: solid 1px;
+  overflow: hidden;
+}
+
+#tableTabs div {
+  overflow: auto;
+  height: 400px;
+}
+
+th,
+td {
+  border: 1px solid;
+  padding: 0.25rem;
+}
+
+th {
+  background-color: mediumpurple;
+}
+
+td {
+  background-color: lavenderblush;
+}
