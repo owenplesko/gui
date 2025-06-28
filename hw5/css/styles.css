@@ -1,3 +1,8 @@
+:root {
+  --tile-height: 48px;
+  --tile-width: 48px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,14 +16,47 @@ body {
 
 #board {
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
+  grid-template-columns: repeat(15, var(--tile-width));
+  grid-template-rows: repeat(15, var(--tile-height));
   gap: 4px;
   padding: 4px;
   border: 2px solid;
 }
 
 #hand {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, var(--tile-width));
+  grid-template-rows: var(--tile-width);
+  background-color: tan;
+  border: 1px solid;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+#hand .ledge {
+  position: absolute;
+  background-color: tan;
+  border: 1px solid;
+  border-radius: 4px;
+
+  /* Cover the bottom of letter tiles */
+  z-index: 10;
+  /* Overhang the hand by 10 px on each side*/
+  width: calc(100% + 16px);
+  /* Center the overhang on x axis*/
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 16px;
+  bottom: -2px;
+}
+
+#hand .placeholder {
+  width: 48px;
+  height: 48px;
+  border: 1px dashed;
+  border-radius: 4px;
 }
 
 /*

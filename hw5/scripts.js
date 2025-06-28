@@ -37,7 +37,8 @@ const hand = { letters: ["A", "B", "C", "D", "E", "F", "G"] }
 hand.render = function() {
   const $hand = $('#hand')
 
-  $hand.empty()
+  const $ledge = $('<div>', { class: "ledge" })
+  $hand.append($ledge)
 
   for (const letter of this.letters) {
     const $tile = newTile(letter)
@@ -75,7 +76,7 @@ const squareAttributes = {
 function newSquare(variant) {
   const { className, text } = squareAttributes[variant]
 
-  const $square = $('<div>', { class: 'square noselect' })
+  const $square = $('<div>', { class: 'square' })
 
   if (className) {
     $square.addClass(className)
@@ -121,7 +122,7 @@ const tileAttributes = {
 function newTile(letter) {
   const { points } = tileAttributes[letter]
 
-  const $tile = $('<div>', { class: 'tile noselect' })
+  const $tile = $('<div>', { class: 'tile' })
 
   const $letter = $('<span>', { class: 'letter' }).text(letter)
   $tile.append($letter)
@@ -135,3 +136,5 @@ function newTile(letter) {
 board.render()
 hand.render()
 
+$('#hand').sortable({ items: '> .tile', revert: true, placeholder: 'placeholder', tolerance: 'pointer' })
+$('.tile, .square').disableSelection();
