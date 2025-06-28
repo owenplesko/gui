@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 4px;
+  padding: 4px;
+  border: 2px solid;
+}
+
+#hand {
+  display: flex;
+}
+
+/*
+* Used for letter tiles and board squares.
+* Prevents the user from selecting text, annoying when trying to drag / select.
+* Sourced: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
+**/
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.tile {
+  background-color: burlywood;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px;
+  border-radius: 4px;
+}
+
+.tile .letter {
+  font-size: 32px;
+}
+
+.tile .points {
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+}
+
+.square {
+  font-weight: bold;
+  font-size: 12px;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(207, 193, 164);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.double-letter {
+  background-color: rgb(184, 232, 249);
+}
+
+.triple-letter {
+  background-color: rgb(92, 175, 242);
+}
+
+.double-word {
+  background-color: rgb(232, 173, 179);
+}
+
+.triple-word {
+  background-color: rgb(224, 104, 98);
+}
