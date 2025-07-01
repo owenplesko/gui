@@ -1,3 +1,5 @@
+/* owen_plesko@student.uml.edu */
+
 :root {
   --tile-height: 48px;
   --tile-width: 48px;
@@ -12,6 +14,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  background-color: lightblue;
+}
+
+#board-wrapper {
+  position: relative;
+  padding: 4px;
+  background-color: white;
 }
 
 #board {
@@ -34,7 +43,11 @@ body {
   border-radius: 4px;
 }
 
-#hand .ledge {
+#hand .tile {
+  cursor: grab;
+}
+
+#ledge {
   position: absolute;
   background-color: tan;
   border: 1px solid;
@@ -53,36 +66,17 @@ body {
 }
 
 #hand .placeholder {
-  width: 48px;
-  height: 48px;
+  width: var(--tile-width);
+  height: var(--tile-height);
   border: 1px dashed;
   border-radius: 4px;
 }
 
-/*
-* Used for letter tiles and board squares.
-* Prevents the user from selecting text, annoying when trying to drag / select.
-* Sourced: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
-**/
-.noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
 .tile {
+  cursor: default;
   background-color: burlywood;
-  width: 48px;
-  height: 48px;
+  height: var(--tile-height);
+  width: var(--tile-width);
   position: relative;
   display: flex;
   align-items: center;
@@ -104,8 +98,8 @@ body {
 .square {
   font-weight: bold;
   font-size: 12px;
-  width: 48px;
-  height: 48px;
+  height: var(--tile-height);
+  width: var(--tile-width);
   background-color: rgb(207, 193, 164);
   display: flex;
   align-items: center;
@@ -127,4 +121,8 @@ body {
 
 .triple-word {
   background-color: rgb(224, 104, 98);
+}
+
+.draggable-hover {
+  border: 2px dashed;
 }
